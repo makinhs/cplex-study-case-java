@@ -7,6 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * Classe mapeada que adiciona detalhes da execução de dado cenário em um devido modelo.
+ * @author Makin
+ *
+ */
 @Entity
 @Table(name = "result_details")
 public class ResultDetailsEntity {
@@ -28,14 +34,6 @@ public class ResultDetailsEntity {
 	@Column(name = "contraints")
 	private int numberOfConstraints;
 
-	// writeln("Best O.F.: ", cplex.getBestObjValue());
-	// writeln("GAP (%): ",
-	// ((cplex.getObjValue()-cplex.getBestObjValue())/cplex.getBestObjValue())*100);
-	// writeln("No Iteration: ", cplex.getNiterations());
-	// writeln("No Tot.Variables: ", cplex.getNcols());
-	//// writeln("No Bin.Variables: ", cplex.getNbinVars() );
-	// writeln("No Bin.Variables: ", cplex.getNNZs() );
-	// writeln("No Constraints: ", cplex.getNrows());
 	public Integer getId() {
 		return id;
 	}

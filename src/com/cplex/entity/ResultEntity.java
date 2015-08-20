@@ -6,10 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/**
+ * Entidade mapeada para salvar o resultado de um cenário rodado em um devido modelo.
+ * @author Makin
+ *
+ */
 @Entity
 @Table(name = "result")
 public class ResultEntity {
@@ -21,10 +25,10 @@ public class ResultEntity {
 	@OneToOne(cascade = CascadeType.ALL)
 	private ResultDetailsEntity result_details;
 
-	@Column(name = "dat_file")
+	@Column(name = "dat_file_name")
 	private String datFileName;
 
-	@Column(name = "mod_file")
+	@Column(name = "mod_file_name")
 	private String modFileName;
 
 	@Column(name = "objective_value")
